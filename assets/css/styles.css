@@ -1,8 +1,10 @@
 header {
     display: flex;
     justify-content: space-between;
+    margin: 2%;
 }
 
+/* have the button change color on mode toggle */
 button.light {
     background-color: black;
     color: white;
@@ -44,6 +46,12 @@ a {
     color: #1f2224;
 }
 
+/* Fix the footer to the bottom of the page */
 footer {
     text-align: center;
+    background-color: green;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
