@@ -6,25 +6,26 @@
     <title>Coding Blog</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
 </head>
 <body class="container light">
     <header>
-        <button id="modeToggle">Dark Mode</button>
+        <button class="modeToggle light">Dark Mode</button>
     </header>
 
     <main>
-        <h1>
+        <h1 id="logo">
             <a href="./pages/blog.html">
                 Coding Blog
             </a>
         </h1>
-        <section>
-            <h2>Jot it Down!</h2>
+        <section id="formCard">
+            <h2 id="formCardTitle">Jot it Down!</h2>
             <form id="form">
-                <label for="username">Username:</label><input type="text" placeholder="Username" id="username">
-                <label for="title">Title:</label><input type="text" placeholder="Title" id="title">
-                <label for="content">Content:</label><textarea id="content" placeholder="Today I..."></textarea>
-                <input type="submit">
+                <label for="username">Username:</label><input type="text" placeholder="Username" id="username" class="input">
+                <label for="title">Title:</label><input type="text" placeholder="Title" id="title" class="input">
+                <label for="content">Content:</label><textarea id="content" placeholder="Today I..." class="input"></textarea>
+                <input type="submit" class="btn">
             </form>
         </section>
     </main>

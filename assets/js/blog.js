@@ -1,4 +1,4 @@
-const test = document.querySelector('#test');
+const blog = document.querySelector('#blog');
 
 function displayBlogPosts() {
     const data = JSON.parse(localStorage.getItem('blogPost')) || [];
@@ -17,7 +17,7 @@ function displayBlogPosts() {
         const pEl = document.createElement('p');
         pEl.textContent = postContent;
         post.appendChild(pEl);
-        test.append(post);
+        blog.append(post);
     }
 }
 

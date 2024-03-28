@@ -14,9 +14,19 @@ function logBlogPost(event) {
         title: title.value,
         content: content.value.trim(),
     }
-    blogArray.push(blogPost);
-    localStorage.setItem('blogPost', JSON.stringify(blogArray));
-    window.location.href = "./pages/blog.html"
+
+    if (blogPost.username === '' || blogPost.title === '' || blogPost.content === '') {
+        const alert = document.createElement('h4');
+        alert.setAttribute('id', 'alert')
+        alert.textContent = 'Please fill out all text fields';
+        form.appendChild(alert);
+        return false;
+    } else {
+        blogArray.push(blogPost);
+        localStorage.setItem('blogPost', JSON.stringify(blogArray));
+        window.location.href = "./pages/blog.html"
+    }
+
 }
 
 form.addEventListener('submit', logBlogPost);
